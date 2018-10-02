@@ -1,4 +1,5 @@
 {
     "prettier.jsxBracketSameLine": true,
-    "prettier.useTabs": true
+    "prettier.useTabs": true,
+    "eslint.enable": true
 }
