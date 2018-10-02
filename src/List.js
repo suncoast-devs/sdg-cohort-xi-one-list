@@ -1,26 +1,16 @@
 import React, { Component } from "react"
-
+import Item from "./Item"
 class List extends Component {
   state = {}
 
   renderItem=(item)=>{
-    let className=""
-    if (item.complete){
-      className="complete"
-    }
-
-    let checked=""
-    if(item.complete){
-      checked="checked"
-    }
+    
     return(
-      <li key={item.id} className={className}>
-        <input type="checkbox" checked={checked} />
-        {item.text} <button>edit</button>
-        <button>delete</button>
-      </li>
-    )
+      <Item id={item.id} text={item.text} complete={item.complete} completeItem={this.props.completeItem}>
+      </Item>)
+    
   }
+  
   render() {
     console.log(this.props.items)
     return (
